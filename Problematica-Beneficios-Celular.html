@@ -2,74 +2,158 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoFood-movil-problematicas</title>
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoFood</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .section-box {
-      background-color: #eef5e5;
-      border-radius: 10px;
+    h1, h2 {
+      color: #2e7d32;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 1rem auto;
+      max-width: 960px;
+    }
+
+    .texto-introduccion, .texto-problematica, .texto-ayuda {
+      position: relative;
+      background-image: url('img/Ilustracion-Alimentos.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      color: white;
+    }
+
+    .texto-introduccion::before,
+    .texto-problematica::before,
+    .texto-ayuda::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+      z-index: 1;
+      border-radius: 12px;
+    }
+
+    .texto-introduccion > *,
+    .texto-problematica > *,
+    .texto-ayuda > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+      padding-left: 0;
+    }
+
+    footer {
+      background-color: #405c2d;
+      color: white;
       padding: 20px;
-      margin-bottom: 15px;
+      border-radius: 12px;
+    }
+
+    footer img {
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-success px-3">
-    <a class="navbar-brand text-white fw-bold" href="#">EcoFood</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link text-white" href="#">Misión</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Quiénes somos</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <main class="container py-4">
-    <section class="section-box">
-      <h5>Problemática</h5>
-      <p>Impacto global: Un tercio de los alimentos se desperdicia cada año...</p>
-    </section>
+  <div class="overlay">
 
-    <h5 class="bg-success text-white p-2 rounded">Beneficios y cómo podemos ayudar</h5>
-
-    <section class="section-box">
-      <strong>Menos hambre:</strong> Con solo reducir un 25%...
-      <br><strong>Impacto ambiental:</strong> Menos emisiones...
-      <br><strong>Ahorro económico:</strong> Mejor aprovechamiento de recursos...
-    </section>
-
-    <section class="section-box">
-      <strong>Compra con conciencia:</strong> Planifica y aprovecha al máximo...
-      <br><strong>Apoya productos locales:</strong> Producción sostenible...
-    </section>
-
-    <section class="section-box">
-      <strong>Únete a iniciativas:</strong> Participa y difunde información...
-    </section>
-  </main>
-
-  <footer class="bg-light text-dark text-center py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <strong>Sede:</strong> Calle Verde 123, Ciudad Sostenible.
-        </div>
-        <div class="col-md-4">
-          <strong>Teléfono:</strong> +56 9 1234 5678<br>
-          <strong>Email:</strong> contacto@ecofood.org
-        </div>
-        <div class="col-md-4">
-          <strong>Redes sociales:</strong><br>
-          Facebook: EcoFoodOficial<br>
-          Instagram: @ecofood_oficial<br>
-          Twitter: @EcoFood_org
+    <!-- Navbar Responsive -->
+    <nav class="navbar navbar-expand-lg mb-4" style="background-color: #e0f2cf; border-radius: 12px;">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/Logo Ecofood.png" alt="Logo" width="40" class="me-2">
+          <img src="img/Icono letras.png" alt="Texto Logo" width="150" class="me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarEcoFood" aria-controls="navbarEcoFood" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarEcoFood">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Misión</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Quiénes somos</a></li>
+          </ul>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2 mt-lg-0">
+            <button class="btn btn-outline-dark me-md-2" type="button">Iniciar sesión</button>
+            <button class="btn btn-success" type="button">Registro</button>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Sección: Impacto Global -->
+    <section class="texto-introduccion">
+      <h2 class="h5 fw-bold">Impacto global</h2>
+      <p>Un tercio de los alimentos se desperdicia cada año, contribuyendo al cambio climático y la desigualdad social.</p>
+      <p><strong>Oportunidad de cambio:</strong> Reducir el desperdicio en 25% podría alimentar a 870 millones de personas y traer beneficios ambientales y económicos.</p>
+      <p><strong>Acción necesaria:</strong> La educación y la conciencia son clave. Consumidores, empresas y gobiernos deben trabajar juntos por un futuro sostenible.</p>
+    </section>
+
+    <!-- Sección: Problemática -->
+    <section class="texto-problematica">
+      <h2 class="h5 fw-bold">Problemática</h2>
+      <ul class="list-group list-group-flush">
+        <p class="mb-2"><strong>Menos hambre:</strong> Con solo reducir un 25% del desperdicio, podríamos alimentar a 870 millones de personas.</p>
+        <p class="mb-2"><strong>Impacto ambiental positivo:</strong> Menos desperdicio significa menos emisiones de gases de efecto invernadero.</p>
+        <p class="mb-2"><strong>Ahorro económico:</strong> Aprovechar mejor los alimentos reduce costos en hogares y negocios.</p>
+      </ul>
+    </section>
+
+    <!-- Sección: Cómo ayudar -->
+    <section class="texto-ayuda">
+      <h2 class="h5 fw-bold">¿Cómo podemos ayudar?</h2>
+      <ul class="list-group list-group-flush mb-3">
+        <p class="mb-0">Compra con conciencia: planifica tus compras y aprovecha los alimentos al máximo.</p>
+        <p class="mb-0"> Prefiere productos locales: apoya la producción sostenible y de temporada.</p>
+        <p class="mb-0"> Comparte el mensaje: difunde información sobre el impacto del desperdicio alimentario.</p>
+        <p class="mb-0"> Únete a iniciativas: participa en campañas y proyectos para reducir el desperdicio.</p>
+      </ul>
+      <p class="mb-0">Cada pequeño cambio suma. La reducción del desperdicio alimentario no solo beneficia a quienes más lo necesitan, sino que también ayuda a preservar el planeta y a construir un sistema alimentario más justo y eficiente.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-4">
+      <div class="container">
+        <div class="row text-start gy-3">
+          <div class="col-12 col-md-4">
+            <p><strong>Sede:</strong><br>Calle Verde 123, Ciudad Sostenible</p>
+            <img src="img/Ecofood-Sede.png" alt="Logo EcoFood">
+          </div>
+          <div class="col-12 col-md-4">
+            <p><strong>Correo electrónico:</strong><br>contacto@ecofood.org</p>
+            <p><strong>Teléfono:</strong><br>+56 9 1234 5678</p>
+          </div>
+          <div class="col-12 col-md-4">
+            <p><strong>Redes Sociales:</strong></p>
+            <p>
+              <img src="img/Logo facebook.png" alt="Facebook" width="30" class="me-2">
+              Facebook: EcoFoodOficial<br>
+              <img src="img/logo instagram.png" alt="Instagram" width="30" class="me-2">
+              Instagram: @ecofood_oficial<br>
+              <img src="img/logo x.png" alt="Twitter" width="30" class="me-2">
+              Twitter: @EcoFood_org
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
