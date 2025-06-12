@@ -1,3 +1,3 @@
 # EcoFood-Ev12-P3-C1-JB
 
-Realizacion paginas eco food en base al mockup con htmml y bootstrap en su version 5.3.2 las dos de escritorio se ven bastante bien y decentes en tanto a las de mobil no creo realmente haber completado lo que se esperaba
+Realizacion paginas eco food en base al mockup con htmml y bootstrap en su version 5.3.2 las dos de escritorio se ven bastante bien y decentes en tanto a las de movil no creo realmente haber completado lo que se esperaba generar la pagina de movil fue dificil y entiendo que este trabajo hubiera sido mas facil e ordenado con el uso de el style.css pero a la hora de plantear eso realmente ya tenia muy avanzado 2 paginas espero que se vea bien este trabajo fue realizado por Juan Blanco acepto todo tipo de retroalimentacion y me gusto bastante la experiencia de realizar estas paginas tratando de seguir el mockup
