@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoFood - Página 1</title>
+  <title>EcoFood - mobil</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -14,91 +14,138 @@
       background-color: #647E25; /* Verde oscuro */
     }
     .hero {
-      background-image: url('img/Hero-Mobil.png');
-      background-size:cover;
+      background-image: url('img/Hero-Movil.png');
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: white;
-      padding: 100px 200px;
+      padding: 80px 20px;
       text-shadow: 1px 1px 3px #333;
     }
     .card-custom {
       background-color: #eef5e5;
+      padding: 20px;
+      border-radius: 8px;
     }
-    .container.py-4 {
-    background-color: #ffffff; /* color claro de fondo */
+    .seccion-problema {
+      background-image: url('img/Ilustracion-Movil.png'); /* Cambia por tu ruta real */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #333; /* Asegura buena legibilidad */
+      padding: 60px 20px;
+      border-radius: 8px;
+    }
+    .politica-reciclaje {
+      background-color: #d4e8c3; /* Color claro para el botón */
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto 0 auto;
+      padding: 20px;
+      border-radius: 8px;
     }
     .footer {
       font-size: 0.9rem;
+      background-color: #647E25;
+      color: white;
+      padding: 30px 0;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 100px 200px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-success px-3">
-    <a class="navbar-brand text-white fw-bold" href="#">EcoFood</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link text-white" href="#">Misión</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Quiénes somos</a></li>
-        <img src="" alt="">
-      </ul>
+  <!-- Encabezado (Navbar) -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #e0f2cf;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/Logo Ecofood.png" alt="Logo" width="50" class="me-3">
+        <img src="img/Icono letras.png" alt="Logo" width="200" class="me-4 img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Misión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Quiénes somos</a></li>
+        </ul>
+        <button class="btn btn-outline-dark me-2">Iniciar sesión</button>
+        <button class="btn btn-success">Registro</button>
+      </div>
     </div>
   </nav>
 
   <!-- Hero section -->
   <header class="hero text-center">
-    <h1 class="display-5 fw-bold">Centrados en el presente para buscar un futuro</h1>
+    <h1 class="display-6 fw-bold">Centrados en el presente para buscar un futuro</h1>
     <p class="lead">Todos juntos, lo podemos lograr.</p>
     <a class="btn fw-bold mt-3" href="#" style="background-color: #647E25; color: white;">Únete a EcoFood</a>
   </header>
 
   <!-- Problema -->
-<section class="container py-4">
-  <div class="d-flex justify-content-between flex-wrap" style="gap: 80px; align-items: flex-start;">
-    <!-- Tarjeta izquierda: más abajo y desplazada más a la izquierda -->
-    <div class="card-custom" style="width: 45%; margin-top: 80px; margin-left: -40px;">
-      <h5>Un Problema presente</h5>
-      <p>El desperdicio de alimentos es una crisis silenciosa y devastadora. A nivel global, un tercio de la comida se desecha mientras millones sufren hambre. Esta desigualdad también impacta el ambiente, ya que los alimentos desechados generan hasta el 10% de las emisiones de gases de efecto invernadero, acelerando el cambio climático.</p>
-      <a class="btn btn-success btn-sm" href="#">Más información</a>
-    </div>
-
-    <!-- Tarjeta derecha: arriba y desplazada más a la derecha -->
-    <div class="card-custom" style="width: 45%; margin-top: 0; margin-right: -40px;">
-      <h5>¿Qué podemos hacer?</h5>
-      <p>En EcoFood, reducimos el desperdicio alimentario con educación, innovación y compromiso. Cada acción cuenta: planifica tus compras, apoya productos locales y comparte el mensaje. Únete al cambio participando en nuestras campañas y eventos.</p>
-      <a class="btn btn-success btn-sm" href="#">Más información</a>
-    </div>
-  </div>
-
-  <div class="text-center mt-5">
-    <p>Descarga aquí nuestra política de reciclaje</p>
-    <a class="btn btn-success" href="#">Descargar aquí</a>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="bg-light text-dark text-center py-3 footer">
+  <section class="container-fluid py-5 seccion-problema">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <strong>Sede:</strong><br>
-          Calle Verde 123, Ciudad Sostenible.
+      <div class="row g-4">
+        <!-- Tarjeta izquierda -->
+        <div class="col-md-6">
+          <div class="card-custom h-100">
+            <h5>Un Problema presente</h5>
+            <p>El desperdicio de alimentos es una crisis silenciosa y devastadora. A nivel global, un tercio de la comida se desecha mientras millones sufren hambre. Esta desigualdad también impacta el ambiente, ya que los alimentos desechados generan hasta el 10% de las emisiones de gases de efecto invernadero, acelerando el cambio climático.</p>
+            <a class="btn btn-success btn-sm" href="#">Más información</a>
+          </div>
         </div>
-        <div class="col-md-4">
-          <strong>Teléfono:</strong> +56 9 1234 5678<br>
-          <strong>Email:</strong> contacto@ecofood.org
+
+        <!-- Tarjeta derecha -->
+        <div class="col-md-6">
+          <div class="card-custom h-100">
+            <h5>¿Qué podemos hacer?</h5>
+            <p>En EcoFood, reducimos el desperdicio alimentario con educación, innovación y compromiso. Cada acción cuenta: planifica tus compras, apoya productos locales y comparte el mensaje. Únete al cambio participando en nuestras campañas y eventos.</p>
+            <a class="btn btn-success btn-sm" href="#">Más información</a>
+          </div>
         </div>
-        <div class="col-md-4">
-          <strong>Nuestras redes</strong><br>
-          Facebook: EcoFoodOficial<br>
-          Instagram: @ecofood_oficial<br>
-          Twitter: @EcoFood_org
+      </div>
+
+      <!-- Botón descarga política -->
+      <div class="text-center mt-5 politica-reciclaje">
+        <p>Descarga aquí nuestra política de reciclaje</p>
+        <a class="btn btn-success" href="#">Descargar aquí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie De Pagina (Footer) -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-4 mb-3">
+          <p><strong>Sede:</strong><br>Calle Verde 123, Ciudad Sostenible</p>
+          <img src="img/Ecofood-Sede.png" alt="Logo" width="150" class="me-3">
+        </div>
+        <div class="col-md-4 mb-3">
+          <p><strong>Correo electrónico:</strong><br>contacto@ecofood.org</p>
+          <p><strong>Teléfono:</strong><br>+56 9 1234 5678</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <p><strong>Redes Sociales:</strong></p>
+          <p>
+            <img src="img/Logo facebook.png" alt="Logo" width="40" class="me-2">
+            Facebook: EcoFoodOficial<br>
+            <img src="img/logo instagram.png" alt="Logo" width="40" class="me-2">
+            Instagram: @ecofood_oficial<br>
+            <img src="img/logo x.png" alt="Logo" width="50" class="me-2">
+            Twitter: @EcoFood_org<br>
+          </p>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
